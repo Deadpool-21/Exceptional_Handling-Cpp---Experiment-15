@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    float num, den, div;
+    cout << "Enter numerator: ";
+    cin >> num;
+    cout << "Enter denominator: ";
+    cin >> den;
+    try{
+        if(den == 0) {
+            throw den;
+
+        }
+        else{
+            div = num/den;
+            cout << "Division is: " << div << endl;
+        }
+
+    }
+    catch(float e) {
+        cout << "Exception caught: Division by zero is not possible." << endl;
+}
+}
+
+
+Output :- 
+
+Enter numerator: 8
+Enter denominator: 0
+Exception caught: Division by zero is not possible.
